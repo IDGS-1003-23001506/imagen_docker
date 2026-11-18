@@ -9,7 +9,7 @@ def test_inicio():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json() == {"mensaje": "Tienda DevOps 1.0"}
+    assert response.json() == {"mensaje": "Tienda DevOps 2.0"}
 
 
 def test_calcular_compra_valida():
@@ -42,4 +42,4 @@ def test_calcular_compra_descuento_invalido():
 def test_version():
     respuesta = client.get("/version")
     assert respuesta.status_code == 200
-    assert respuesta.json()["version"] == "1.0.0"
+    assert respuesta.json()["version"] == "2.0.0"
